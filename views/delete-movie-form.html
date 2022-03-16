@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Films : supression</title>
+    <link rel="stylesheet" type="text/css" href="../public/css/movie-global-style.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/movie-form-style.css">
+</head>
+<body>
+<h1>SUPPRIMER UN FILM</h1>
+Voulez-vous vraiment supprimer "{{title}}" ?
+<br><br>
+<form action="/">
+    <input class="button" type="submit" value="Annuler">
+</form>
+<br>
+<form action="/delete-movie/{{id}}" method="get">
+    <input class="button" type="submit" value="Supprimer">
+</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Films : ajout</title>
+    <link rel="stylesheet" type="text/css" href="../public/css/movie-global-style.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/movie-form-style.css">
+</head>
+<body>
+<h1>AJOUTER UN FILM</h1>
+<form action="/add-movie" method="GET">
+    <label for="title">Titre</label><br>
+    <input id="title" type="text" name="title" placeholder="Titre"><br><br>
+    <label for="year">Année</label><br>
+    <input id="year" type="number" name="year" placeholder="Année"><br><br>
+    <label for="actors">Nom des acteurs</label><br>
+    <input id="actors" type="text" name="actors" placeholder="Acteurs"><br><br>
+    <label for=plot>Résumé de l'histoire</label><br>
+    <input id="plot" type="text" name="plot" placeholder="Résumé"><br><br>
+    <label for=poster>Lien vers l'affiche du film</label><br>
+    <input id="poster" type="text" name="poster" placeholder="Affiche URL"><br><br>
+    <input class="button" type="submit" value="Soumettre">
+</form>
+<br>
+<form action="/">
+    <input class="button" type="submit" value="Annuler">
+</form>
+</body>
+</html>

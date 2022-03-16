@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset=UTF-8>
+    <title>Films : détails</title>
+    <link rel="stylesheet" type="text/css" href="../public/css/movie-global-style.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/movie-details-style.css">
+</head>
+<body>
+<h1> DETAILS DU FILM </h1>
+<a id="back" href="http://127.0.0.1:3000/">retour</a><br><br>
+<span>Titre : </span>{{title}}<br>
+<span>Année : </span>{{year}}<br>
+<span>Nom des acteurs : </span>{{actors}}<br>
+<span>Résumé de l'histoire : </span>{{plot}}<br><br>
+<a href="http://127.0.0.1:3000/edit-movie-form/{{id}}">modifier</a>
+<a href="http://127.0.0.1:3000/delete-movie-form/{{id}}">supprimer</a><br><br>
+<img src="{{poster}}" width="300" alt="Affiche du film">
+</body>

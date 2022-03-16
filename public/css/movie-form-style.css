@@ -1,0 +1,13 @@
+body {
+    text-align: center;
+}
+
+label {
+    font-size: x-large;
+    font-family: "Tw Cen MT Condensed";
+}
+
+.button {
+    background-color: gray;
+    color: white;
+}

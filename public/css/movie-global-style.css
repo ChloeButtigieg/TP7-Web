@@ -1,0 +1,23 @@
+body {
+    font-family: "Tw Cen MT";
+}
+
+h1 {
+    text-align: center;
+    color: gray;
+    font-family: "Tw Cen MT Condensed";
+    border: solid gray;
+}
+
+a {
+    text-decoration: none;
+    color: gray;
+    font-style: italic;
+    font-weight: bold;
+    font-size: medium;
+    font-family: "Tw Cen MT";
+}
+
+a:hover {
+    text-decoration: underline;
+}
