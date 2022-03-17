@@ -5,9 +5,7 @@ const Sqlite = require('better-sqlite3');
 
 let db = new Sqlite('db.sqlite');
 
-if (db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='movies'").get() != undefined) {
-    db.prepare('DROP TABLE movies').run();
-}
+db.prepare('DROP TABLE IF EXISTS movies').run();
 db.prepare('CREATE TABLE movies (' +
     'id  INTEGER PRIMARY KEY AUTOINCREMENT,' +
     'title TEXT,' +
