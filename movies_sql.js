@@ -4,8 +4,11 @@ const fs = require('fs');
 const Sqlite = require('better-sqlite3');
 
 let db = new Sqlite('db.sqlite');
-db.prepare('DROP TABLE movies;').run();
-db.prepare('CREATE TABLE movies (\n' +
+
+if (db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='movies'").get() != undefined) {
+    db.prepare('DROP TABLE movies').run();
+}
+db.prepare('CREATE TABLE movies (' +
     'id  INTEGER PRIMARY KEY AUTOINCREMENT,' +
     'title TEXT,' +
     'year INTEGER,' +
@@ -43,7 +46,7 @@ exports.list = function() {
 };
 
 exports.create = function(title, year, actors, plot, poster) {
-    return db.prepare('INSERT INTO movies (title, year, actors, plot, poster) VALUES (?, ?, ?, ?, ?);').run(title, year, actors, plot, poster).lastInsertRowid;
+    return db.prepare('INSERT INTO movies (title, poster, actors, plot, year) VALUES (?, ?, ?, ?, ?);').run(title, poster, actors, plot, year).lastInsertRowid;
 };
 
 exports.read = function(id) {
